@@ -61,6 +61,15 @@ def save_password():
         password_entry.delete(0, END)
         website_entry.focus()
 
+# ---------------------- SEARCH FOR PASSWORD -------------------------- #
+
+def find_password():
+           pass
+
+
+
+
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 
