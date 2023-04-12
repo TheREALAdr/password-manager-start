@@ -70,8 +70,9 @@ def find_password():
             print(v['name'], v['password'])
            
 # for v in data.values():
-#     if website_entry.get() == v:
-#        pass
+#     if website_entry.get() == str(v):  
+#         messagebox.showinfo(title="Website already in database", message=f"Website: {str(v)}\n Password:
+#                                   f"{str(v["password"])}
            
 
 
