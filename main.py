@@ -64,10 +64,10 @@ def save_password():
 # ---------------------- SEARCH FOR PASSWORD -------------------------- #
 # Base code for looping through a .json file, check later
 def find_password():
-           with open('data.json') as data_file:
-                      data = json.load(data_file)
-                      for v in data.values():
-                                 print(v['name'])
+    with open('data.json') as data_file:
+        data = json.load(data_file)
+        for v in data.values():
+            print(v['name'], v['password'])
            
 
 
