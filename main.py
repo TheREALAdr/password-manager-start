@@ -69,6 +69,10 @@ def find_password():
         for v in data.values():
             print(v['name'], v['password'])
            
+# for v in data.values():
+#     if website_entry.get() == v:
+#        pass
+           
 
 
 
