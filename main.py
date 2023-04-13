@@ -63,16 +63,20 @@ def save_password():
 
 # ---------------------- SEARCH FOR PASSWORD -------------------------- #
 # Base code for looping through a .json file, check later
-def find_password():
-    with open('data.json') as data_file:
-        data = json.load(data_file)
-        for v in data.values():
-            print(v['name'], v['password'])
+# def find_password():
+# (ADD TRY CATCH HERE!!!!)
+#     with open('data.json') as data_file:
+#         data = json.load(data_file)
+#         for v in data.values():
+#             print(v['name'], v['password'])
            
-# for v in data.values():
-#     if website_entry.get() == str(v):  
-#         messagebox.showinfo(title="Website already in database", message=f"Website: {str(v)}\n Password:
-#                                   f"{str(v["password"])}
+#     for v in data.values():
+#         if website_entry.get() == str(v):  
+#             messagebox.showinfo(title="Website already in database", message=f"Website: {str(v)}\n Password:
+#                                      f"{str(v["password"])}
+#     
+
+#
            
 
 
