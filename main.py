@@ -80,7 +80,13 @@ def find_password():
             # Testing try catch (MIGHT NOT WORK, NEED TO TEST IN AN ENVIRONMENT!!!)
 #                 try:
 #                     if website_entry.get() == list_of_json_items[website_entry.get()]:
-#                         old_website_name == website_entry.get()
+#                     old_website_name = website_entry.get()
+#                 except KeyError:
+                
+
+
+
+
 #               # TEST THIS BLOCK!!!!
 #                 if website_entry.get() == str(item["website"]):  
 #                     messagebox.showinfo(title="Website already in database", message=f"Website: {str(item)}\n" 
