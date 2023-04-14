@@ -62,18 +62,29 @@ def save_password():
         website_entry.focus()
 
 # ---------------------- SEARCH FOR PASSWORD -------------------------- #
-# Base code for looping through a .json file, check later
-# def find_password():
-# (ADD TRY CATCH HERE!!!!)
-#     with open('data.json') as data_file:
-#         data = json.load(data_file)
-#         for v in data.values():
-#             print(v['name'], v['password'])
-           
-#     for v in data.values():
-#         if website_entry.get() == str(v):  
-#             messagebox.showinfo(title="Website already in database", message=f"Website: {str(v)}\n Password:
-#                                      f"{str(v["password"])}
+
+def find_password():
+    try:
+        with open('data.json') as data_file:
+            data = json.load(data_file)
+        except (FileNotFoundError, json.decoder.JSONDecodeError):
+            data = open("data.json", mode="w"):
+            data.close()
+            # Add error message here!!!
+        else:
+            list_of_json_items = data.values()
+            # Code used for testing how to loop through data.values()
+#             for item in list_of_json_items:
+#                 print(item['name'], item['password'])          
+            for item in list_of_json_items:
+            # Testing try catch (MIGHT NOT WORK, NEED TO TEST IN AN ENVIRONMENT!!!)
+#                 try:
+#                     if website_entry.get() == list_of_json_items[website_entry.get()]:
+#                         old_website_name == website_entry.get()
+#   
+                if website_entry.get() == str(v[item]):  
+                    messagebox.showinfo(title="Website already in database", message=f"Website: {str(item)}\n" 
+                                             f" Password: {str(item["password"]}")
 #     
 
 #
