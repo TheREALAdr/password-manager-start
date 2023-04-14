@@ -81,10 +81,10 @@ def find_password():
 #                 try:
 #                     if website_entry.get() == list_of_json_items[website_entry.get()]:
 #                         old_website_name == website_entry.get()
-#   
-                if website_entry.get() == str(v[item]):  
-                    messagebox.showinfo(title="Website already in database", message=f"Website: {str(item)}\n" 
-                                             f" Password: {str(item["password"]}")
+#               # TEST THIS BLOCK!!!!
+#                 if website_entry.get() == str(item["website"]):  
+#                     messagebox.showinfo(title="Website already in database", message=f"Website: {str(item)}\n" 
+#                                              f" Password: {str(item["password"]}")
 #     
 
 #
