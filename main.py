@@ -61,30 +61,34 @@ def save_password():
         password_entry.delete(0, END)
         website_entry.focus()
 
+
 # ---------------------- SEARCH FOR PASSWORD -------------------------- #
 
 def find_password():
     try:
         with open('data.json') as data_file:
             data = json.load(data_file)
-        except (FileNotFoundError, json.decoder.JSONDecodeError):
-            data = open("data.json", mode="w"):
-            data.close()
-            # Add error message here!!!
-        else:
-            list_of_json_items = data.values()
-            # Code used for testing how to loop through data.values()
-#             for item in list_of_json_items:
-#                 print(item['name'], item['password'])          
-            for item in list_of_json_items:
-            # Testing try catch (MIGHT NOT WORK, NEED TO TEST IN AN ENVIRONMENT!!!)
-#                 try:
-#                     if website_entry.get() == list_of_json_items[website_entry.get()]:
-#                     old_website_name = website_entry.get()
-#                 except KeyError:
-                
-
-
+    except (FileNotFoundError, json.decoder.JSONDecodeError):
+        data = open("data.json", mode="w")
+        data.close()
+        messagebox.showwarning(title="File Empty", message="Error: No data found.")
+    else:
+        x = data["Facebook"]["email_and_user"]
+        # Testing done, delete two lines below??
+        # for item in list_of_json_items:
+        #    print(item['email_and_user'], item['password'])
+        for item in data:
+            try:
+                if website_entry.get() == item:
+                    old_website = item
+                    old_email_and_user = data[item]["email_and_user"]
+                    old_password = data[item]["password"]
+                    messagebox.showinfo(title=f"{item} Info", message=f"Email/User: {old_email_and_user}\n "
+                                                                      f"Password: {old_password}")
+            except KeyError:
+                continue
+            finally:
+                print("Process test completed.")
 
 
 #               # TEST THIS BLOCK!!!!
@@ -94,10 +98,6 @@ def find_password():
 #     
 
 #
-           
-
-
-
 
 
 # ---------------------------- UI SETUP ------------------------------- #
