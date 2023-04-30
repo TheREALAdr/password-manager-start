@@ -73,22 +73,20 @@ def find_password():
         data.close()
         messagebox.showwarning(title="File Empty", message="Error: No data found.")
     else:
-        x = data["Facebook"]["email_and_user"]
-        # Testing done, delete two lines below??
-        # for item in list_of_json_items:
-        #    print(item['email_and_user'], item['password'])
-        for item in data:
-            try:
+        old_website = ""
+        try:
+            for item in data:
                 if website_entry.get() == item:
                     old_website = item
                     old_email_and_user = data[item]["email_and_user"]
                     old_password = data[item]["password"]
-                    messagebox.showinfo(title=f"{item} Info", message=f"Email/User: {old_email_and_user}\n "
-                                                                      f"Password: {old_password}")
-            except KeyError:
-                continue
-            finally:
-                print("Process test completed.")
+                    messagebox.showinfo(title=f"{old_website} Info", message=f"Email/User: {old_email_and_user}\n "
+                                                                         f"Password: {old_password}")
+            if website_entry.get() != old_website:
+                messagebox.showinfo(title="Invalid Website", message="Website not in database.")
+        except KeyError:
+            print("Something wrong here...")
+        # except value here might be useless. If it is, delete it and just use the for loop instead.
 
 
 #               # TEST THIS BLOCK!!!!
