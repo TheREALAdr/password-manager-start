@@ -89,11 +89,6 @@ def find_password():
         # except value here might be useless. If it is, delete it and just use the for loop instead.
 
 
-#     
-
-#
-
-
 # ---------------------------- UI SETUP ------------------------------- #
 
 
