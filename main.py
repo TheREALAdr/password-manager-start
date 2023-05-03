@@ -98,7 +98,7 @@ window.config(padx=50, pady=50)
 
 logo_img = PhotoImage(file="logo.png")
 
-canvas = Canvas(height=200, width=200, highlightthickness=0, )
+canvas = Canvas(height=200, width=200, highlightthickness=0)
 canvas.create_image(100, 100, image=logo_img)
 canvas.grid(column=0, row=0, columnspan=3)
 
